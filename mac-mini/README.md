@@ -17,6 +17,20 @@ Mac mini (M4) の再起動時セットアップ。
 | `com.mizuta.claude-rc.kanken` | `~/work/products/kanken` |
 | `com.mizuta.claude-rc.dotfiles` | `~/work/dotfiles` |
 
+## colima の自動起動
+
+`LaunchAgents/com.mizuta.colima.plist` が、ログイン時に
+
+```sh
+colima start --cpus 8 --memory 16
+```
+
+を実行する(メモリ 16GiB / CPU 8コア)。`colima start` は VM を起動したら終了する
+ため `KeepAlive` は付けていない。ログは `~/Library/Logs/colima/`。
+
+設定値を変えるときは plist を編集して `bootstrap.sh` を再実行する
+(`--save-config` の既定が true なので `~/.colima/default/colima.yaml` も更新される)。
+
 ## セットアップ
 
 ```sh
