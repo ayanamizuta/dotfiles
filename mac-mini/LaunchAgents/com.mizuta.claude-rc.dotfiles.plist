@@ -4,7 +4,7 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.mizuta.claude-rc.kanken</string>
+  <string>com.mizuta.claude-rc.dotfiles</string>
   <key>ProgramArguments</key>
   <array>
     <string>/bin/zsh</string>
@@ -12,14 +12,14 @@
     <string>export PATH="$HOME/.local/bin:$PATH"; claude remote-control --continue || claude remote-control --spawn worktree --sandbox</string>
   </array>
   <key>WorkingDirectory</key>
-  <string>/Users/mizuta/work/products/kanken</string>
+  <string>/Users/mizuta/work/dotfiles</string>
   <key>RunAtLoad</key>
   <true/>
   <key>KeepAlive</key>
   <true/>
   <key>StandardOutPath</key>
-  <string>/Users/mizuta/Library/Logs/claude-rc/kanken.log</string>
+  <string>/Users/mizuta/Library/Logs/claude-rc/dotfiles.log</string>
   <key>StandardErrorPath</key>
-  <string>/Users/mizuta/Library/Logs/claude-rc/kanken.err.log</string>
+  <string>/Users/mizuta/Library/Logs/claude-rc/dotfiles.err.log</string>
 </dict>
 </plist>

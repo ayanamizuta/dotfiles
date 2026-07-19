@@ -15,6 +15,7 @@ Mac mini (M4) の再起動時セットアップ。
 | `com.mizuta.claude-rc.umigame` | `~/work/products/umigame` |
 | `com.mizuta.claude-rc.wedraft-flows` | `~/work/wedraft/flows` |
 | `com.mizuta.claude-rc.kanken` | `~/work/products/kanken` |
+| `com.mizuta.claude-rc.dotfiles` | `~/work/dotfiles` |
 
 ## セットアップ
 
