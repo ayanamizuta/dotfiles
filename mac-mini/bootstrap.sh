@@ -30,8 +30,17 @@ for plist in "${AGENT_SRC}"/com.mizuta.claude-rc.*.plist; do
   # 既に登録済みなら一旦解除してから入れ替える(冪等)
   launchctl bootout "${GUI_DOMAIN}/${label}" 2>/dev/null || true
   cp "${plist}" "${dst}"
-  launchctl bootstrap "${GUI_DOMAIN}" "${dst}"
-  echo "installed: ${label}"
+
+  # bootout は非同期なので、旧プロセスが落ちきる前に bootstrap すると
+  # "Input/output error" (EIO) で失敗する。成功するまでリトライする
+  for _ in {1..30}; do
+    if launchctl bootstrap "${GUI_DOMAIN}" "${dst}" 2>/dev/null; then
+      echo "installed: ${label}"
+      continue 2
+    fi
+    sleep 1
+  done
+  echo "failed: ${label}" >&2
 done
 
 echo
