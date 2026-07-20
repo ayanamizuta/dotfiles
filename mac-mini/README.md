@@ -5,17 +5,19 @@ Mac mini (M4) の再起動時セットアップ。
 ## claude remote-control の自動起動
 
 `LaunchAgents/` の plist は、以下の各ディレクトリで
-`claude remote-control --spawn worktree --sandbox` をログイン時に自動起動する
-(セッションはリクエストごとに個別の git worktree で立ち上がる)。
+`claude remote-control` をログイン時に自動起動する。
+`--spawn worktree` 付きのものはリクエストごとに個別の git worktree で
+セッションが立ち上がる。dotfiles と incubate は PR を作らず main に
+直接 push する運用のため worktree を使わない (各 repo の AGENTS.md 参照)。
 
-| plist | ディレクトリ |
-|---|---|
-| `com.mizuta.claude-rc.incubate` | `~/work/products/incubate` |
-| `com.mizuta.claude-rc.talksmith` | `~/work/loov/Talksmith` |
-| `com.mizuta.claude-rc.umigame` | `~/work/products/umigame` |
-| `com.mizuta.claude-rc.wedraft-flows` | `~/work/wedraft/flows` |
-| `com.mizuta.claude-rc.kanken` | `~/work/products/kanken` |
-| `com.mizuta.claude-rc.dotfiles` | `~/work/dotfiles` |
+| plist | ディレクトリ | spawn |
+|---|---|---|
+| `com.mizuta.claude-rc.incubate` | `~/work/products/incubate` | なし |
+| `com.mizuta.claude-rc.talksmith` | `~/work/loov/Talksmith` | worktree |
+| `com.mizuta.claude-rc.umigame` | `~/work/products/umigame` | worktree |
+| `com.mizuta.claude-rc.wedraft-flows` | `~/work/wedraft/flows` | worktree |
+| `com.mizuta.claude-rc.kanken` | `~/work/products/kanken` | worktree |
+| `com.mizuta.claude-rc.dotfiles` | `~/work/dotfiles` | なし |
 
 ## colima の自動起動
 
