@@ -38,5 +38,5 @@ cd mac-mini
   再開したいときは該当 worktree で `claude -r` から個別に選ぶ
 - 再起動後に自動で走らせるには、macOS の自動ログインが有効である必要がある
   (ログイン画面のままでは LaunchAgent は起動しない)
-- 対象ディレクトリを増減する場合は `LaunchAgents/` に plist を追加/削除して
-  `bootstrap.sh` を再実行
+- plist を追加/削除/変更した場合は `bootstrap.sh` を再実行しないと反映されない
+  (launchd が読むのは `~/Library/LaunchAgents/` のコピー。手順の詳細はリポジトリ直下の AGENTS.md 参照)
