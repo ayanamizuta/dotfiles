@@ -9,7 +9,7 @@
   <array>
     <string>/bin/zsh</string>
     <string>-lc</string>
-    <string>export PATH="$HOME/.local/bin:$PATH"; claude remote-control --continue || claude remote-control --spawn worktree --sandbox</string>
+    <string>export PATH="$HOME/.local/bin:$PATH"; claude remote-control --spawn worktree --sandbox</string>
   </array>
   <key>WorkingDirectory</key>
   <string>/Users/mizuta/work/loov/Talksmith</string>

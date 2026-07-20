@@ -7,7 +7,6 @@
 #
 # 前提:
 #   - claude CLI がインストール済みで、claude.ai アカウントにログイン済み
-#   - --continue には Claude Code v2.1.200 以上が必要
 set -euo pipefail
 
 SCRIPT_DIR="${0:A:h}"
