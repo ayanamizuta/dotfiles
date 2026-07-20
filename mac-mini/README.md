@@ -17,6 +17,12 @@ Mac mini (M4) の再起動時セットアップ。
 | `com.mizuta.claude-rc.kanken` | `~/work/products/kanken` |
 | `com.mizuta.claude-rc.dotfiles` | `~/work/dotfiles` |
 
+## colima の自動起動
+
+`LaunchAgents/com.mizuta.colima.plist` が、ログイン時に
+`colima start --cpus 8 --memory 16` を実行する(各プロジェクトの
+`docker compose` 用)。ログは `~/Library/Logs/colima/`。
+
 ## セットアップ
 
 ```sh
